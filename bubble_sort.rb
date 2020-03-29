@@ -19,7 +19,7 @@ def bubble_sort(input)
 end
 
 def check_sort(input)
-    result = true
+    result = true #sets the flag variable as true; code below sets it to false if an out-of-order number is found
     input.each_with_index do |item, index|
         next_item = input[index + 1]
         if next_item && item > next_item
