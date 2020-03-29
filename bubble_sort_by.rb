@@ -1,9 +1,3 @@
-def sort_if_needed (input, difference, index, item, next_item)
-    if difference > 0
-        input[index], input[index + 1] = next_item, item
-    end
-end
-
 def bubble_sort_by (input)
     while !check_sort(input)
         input.each_with_index do |item, index|
@@ -35,6 +29,12 @@ def check_sort (input)
         end
     end
     result
+end
+
+def sort_if_needed (input, difference, index, item, next_item)
+    if difference > 0
+        input[index], input[index + 1] = next_item, item
+    end
 end
 
 check_array(["abcdefg", "abcdefghij", "abcdefghijklmno", "a", "adam", "bar"])
