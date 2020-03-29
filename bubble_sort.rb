@@ -1,4 +1,4 @@
-def check_array(input)
+def check_array(input) #checks to make sure the user has not passed an incompatible argument
     if input.kind_of?(Array) && input.all? { |item| item.kind_of?(Integer) }
         bubble_sort(input)
     else
@@ -7,7 +7,7 @@ def check_array(input)
 end
 
 def bubble_sort(input)
-    while !check_sort(input)
+    while !check_sort(input) #block below runs until check_sort returns true, which indicates everything is in order
         input.each_with_index do |item, index|
             next_item = input[index + 1]
             if next_item && item > next_item
